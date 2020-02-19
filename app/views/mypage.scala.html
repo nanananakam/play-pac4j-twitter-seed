@@ -1,0 +1,7 @@
+@import org.pac4j.oauth.profile.twitter.TwitterProfile
+@import org.pac4j.play.scala.Pac4jScalaTemplateHelper
+@(profiles: List[org.pac4j.oauth.profile.twitter.TwitterProfile])(implicit pac4jScalaTemplateHelper: Pac4jScalaTemplateHelper[TwitterProfile], requestHeader: RequestHeader)
+
+profiles: @profiles
+
+profiles from templatehelper: @pac4jScalaTemplateHelper.getCurrentProfiles
