@@ -8,8 +8,14 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.12.10"
 
 val playVersion = "2.7.4"
-val pac4jVersion = "3.7.0"
+val pac4jVersion = "3.8.3"
 val playPac4jVersion = "8.0.2"
+val guiceVersion = "4.2.0"
+
+val guiceDeps = Seq(
+  "com.google.inject" % "guice" % guiceVersion,
+  "com.google.inject.extensions" % "guice-assistedinject" % guiceVersion
+)
 
 // TODO: delete unused libraries
 libraryDependencies ++= Seq(
